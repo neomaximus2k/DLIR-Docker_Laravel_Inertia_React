@@ -59,3 +59,7 @@ Now we need to setup the cache system and start migration with seeding.
 php artisan make:cache-table
 php artisan migrate --seed
 ```
+Next is to use a starter mit for reach using inertia
+```
+composer require laravel/breeze --dev
+php artisan breeze:install

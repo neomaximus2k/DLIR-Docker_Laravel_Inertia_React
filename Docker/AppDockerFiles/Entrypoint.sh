@@ -23,7 +23,7 @@ if [ -e /var/www/artisan ]; then
         echo "Working in dev/test mode."
         if [ -d "/var/www/node_modules" ] && [ -f "/var/www/package.json" ] && { [ -f "/var/www/vite.config.js" ] || [ -f "/var/www/vite.config.ts" ] ; }; then
             echo "React - Starting watcher"
-            npm run dev --watch
+            (npm run dev --watch --host&)
         fi
     else
         echo "Working in production"
